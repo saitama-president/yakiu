@@ -1,0 +1,17 @@
+{
+    "name": "saitama-tec/yakiu",
+        "description": "yakiu lib",
+        "authors": [
+        {
+            "name": "s-yoshihara",
+            "email": "s-yoshihara@saitama-tec.co.jp"
+        }
+        ],
+        "require": {}
+
+        "autoload": {
+            "psr-0": {
+                "HelloWorld": "."
+            }
+        }
+}
