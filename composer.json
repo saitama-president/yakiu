@@ -7,11 +7,13 @@
             "email": "s-yoshihara@saitama-tec.co.jp"
         }
         ],
-        "require": {}
-
+        "require": {
+            "monolog/monolog":"1.0.*"
+        }
+        ,
         "autoload": {
             "psr-0": {
-                "HelloWorld": "."
+                "yakiu": "."
             }
         }
 }
