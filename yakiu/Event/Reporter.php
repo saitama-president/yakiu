@@ -6,7 +6,7 @@ namespace yakiu\Event;
 use yakiu\Event\Events\EventGameStart;
 
 
-class Reporter implements EventHandler{
+class Reporter extends EventHandler{
     
     public $name="a";
     
@@ -14,21 +14,7 @@ class Reporter implements EventHandler{
         $this->name=$name;
     }
 
-    public function event(Event $e) {
-        
-        switch (get_class($e))
-        {
-            case EventGameStart::class :
-                $this->Speak("試合が始まりました");
-                break;
-            case Event::class : 
-                $this->Speak("汎用イベント");                
-                break;
-            default : 
-                $this->Speak("よくわからん…");
-                echo "DEF";
-        }
-    }
+
     
     public function Speak($message){
         

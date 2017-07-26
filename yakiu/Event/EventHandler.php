@@ -2,6 +2,15 @@
 
 namespace yakiu\Event;
 
-interface EventHandler{
-    public function event(Event $e);
+abstract class EventHandler {
+    
+    protected abstract function catchUnknownEvent(Event $e);
+
+    public function event(Event $e) {
+        //通常、何も処理しない
+        
+        
+        $this->catchUnknownEvent($e);
+    }
+
 }
