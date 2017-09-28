@@ -41,9 +41,7 @@ abstract class Scene {
         $this->Begin();
         $this->see_all("開始");
         
-        for($i=1;$i<=$this->N;$i++){
-            
-            
+        for($i=1;$i<=$this->N;$i++){                        
             $this->Action($i);
         }
         
@@ -53,7 +51,7 @@ abstract class Scene {
     
     private function see_all($obj){
         foreach ($this->watchers as $watch){
-            $watch->see($obj);
+            var_dump($watch->see($obj)) ;
         }
     }
 
