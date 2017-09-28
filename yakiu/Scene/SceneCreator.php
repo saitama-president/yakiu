@@ -9,5 +9,9 @@ namespace yakiu\Scene;
  * @author s-yoshihara
  */
 class SceneCreator {
-    //put your code here
+
+    public static function SceneBall($n=1){
+        
+        return new NBall();
+    }
 }
