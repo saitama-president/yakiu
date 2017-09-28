@@ -21,4 +21,8 @@ class Reporter extends EventHandler{
         echo "{$this->name}「 $message 」";
     }
 
+    protected function catchUnknownEvent(Event $e) {
+        
+    }
+
 }

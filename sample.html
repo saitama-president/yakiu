@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    </head>
+    <body>
+        
+               <script>
+// Notification対応しているかどうか
+if (window.Notification) {
+  alert('Notificationは有効です');
+
+  // Permissionの確認
+  if (Notification.permission === 'granted') {
+
+    // 許可されている場合はNotificationで通知
+    alert('通知許可されています');
+    var n = new Notification("Hello World");
+
+  } else if (Notification.permission === 'denied') {
+
+    alert('通知拒否されています');
+
+  } else if (Notification.permission === 'default') {
+
+    alert('通知可能か不明です');
+
+    // 許可が取れていない場合はNotificationの許可を取る
+    Notification.requestPermission(function(result) {
+        switch(result){
+            case 'denied':{
+                    alert('リクエスト結果：通知許可されませんでした');
+            }break;
+            case 'granted':{
+                    
+            }break;
+            case 'granted':{
+                    
+            }break;
+        }
+      if (result === '') {
+
+        
+
+      } else if (result === 'default') {
+
+        alert('リクエスト結果：通知可能か不明です');
+
+      } else if (result === 'granted') {
+
+        alert('リクエスト結果：通知許可されました！！');
+        var n = new Notification("Hello World");
+      }
+    })
+  }
+} else {
+  alert('Notificationは無効です');
+}
+        </script>
+        <div>TODO write content</div>
+    </body>
+</html>
